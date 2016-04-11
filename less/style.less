@@ -210,7 +210,14 @@ a{
   text-align:center;
   margin:50px 20px 75px 20px;
 }
-
+.form-cta{
+  text-align: left;
+    .btn-border-black-green-1l{
+      margin-left: 0;
+      margin-top:25px;
+      padding-right: 30px;
+    }
+  }
 .btn-border-black-1l{
   display: inline-block;
   vertical-align: top;
@@ -553,6 +560,44 @@ a{
     }
   }
 }
+
+.link-simple-down{
+  .soleil(1.8em);
+  color:white;
+  text-decoration : underline;
+  padding: 0 0 0 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  margin:20px;
+  &:before{
+    content:"›";
+    transform: rotate(90deg)translateX(0px);
+    margin:0 10px 0 0;
+    position: absolute;
+    left: 0;
+    top:10%;
+    text-decoration: none;
+    font-size: 1em;
+    width: 12px;
+    height: 12px;
+    transition:@transition;
+  }
+  &:hover{
+    .no-touch &{
+      opacity:0.5;
+      &:before{
+        transform: @transform-btn;
+        transform: rotate(90deg)translateX(5px);
+      }
+    }
+  }
+}
+
+.link-p{
+  text-align: center;
+  margin:20px;
+}
+
 .color-green{
   color:@theme-green-dark;
   font-weight:bold;
@@ -564,21 +609,168 @@ a{
 /******* FORMULAIRES *******/
 
 ::-webkit-input-placeholder{
-    color: #8b8b8b;
+    opacity:0.8;
+    .soleil-italic(1em);
 }
 ::-moz-placeholder{
-    color: #8b8b8b;
+    opacity:0.8;
+    .soleil-italic(1em);
 }
 :-ms-input-placeholder{
-    color: #8b8b8b;
+    opacity:0.8;
+    .soleil-italic(1em);
+}
+
+form{
+  margin: 65px 0 125px 0;
+  padding-left:60px;
+  width: calc(~"100% + ~0px");
 }
 
 label{
+  .soleil(1.6em);
+  color:@theme-grey-dark;
+}
 
+.label-decale-right{
+  .soleil(1.6em);
+  color:@theme-grey-dark;
+  margin-right:10px;
+  margin-bottom: 20px;
+}
+
+.label-decale{
+  margin-bottom: 20px;
+  margin-right:10px;
+}
+
+.form-textearea{
+  width:100%;
+  display: block;
 }
 
 fieldset{
-
+  display:inline-block;
+  position: relative;
+  textarea{
+    width: 100%;
+    height:215px;
+    display: inline-block;
+    border: 2px solid @theme-blue;
+    border-radius:3px;
+    padding:10px 5px;
+    .soleil-bold(1.6em);
+    color: @theme-grey-dark;
+  }
+  .check-form{
+    position: absolute;
+    right:25px;
+    top:0;
+    opacity: 0;
+    &:after{
+      content:'';
+      display: block;
+      background-image: url("../img/check.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      width: 50px;
+      height: 40px;
+    }
+  }
+  select{
+    width:315px;
+    border: 2px solid @theme-blue;
+    border-radius:3px;
+    .soleil(1.6em);
+    color: @theme-grey-dark;
+    height:40px;
+    background-color: white;
+    margin-bottom: 25px;
+    margin-right: 30px;
+    option{
+      vertical-align: middle;
+      background-color: white;
+    }
+  }
+  input{
+    width:235px;
+    border: 2px solid #bfc2ca;
+    border-radius:3px;
+    padding:10px 5px 10px 5px;
+    margin-right: 30px;
+    margin-bottom: 35px;
+    .soleil-bold(1.6em);
+    color: @theme-grey-dark;
+    &:valid{
+      border: 2px solid @theme-green-dark;
+      &~ .check-form{
+        opacity: 1;
+      } 
+    }
+    &[type="file"]{
+      border:none;
+      margin-right:0;
+    }
+  }
+  .message-error:before{
+    content:"";
+    position:absolute;
+    display: block;
+    top:45px;
+    left:5px;
+    .soleil-italic(1.4em);
+    color:#e91c2c;
+  }
+  input:focus{
+    opacity: 1;
+    &[type="text"]:invalid{
+      &~ .message-error.first-name-form{
+        &:before{
+          content: "Votre prénom semble erroné";
+        }
+      }
+      &~ .message-error.name-form{
+        &:before{
+          content: "Votre nom semble erroné";
+        }
+      }
+      &~ .message-error.entreprise-form{
+        &:before{
+          content: "Votre entreprise semble erronée";
+        }
+      }
+      border: 2px solid #e91c2c;
+    }
+    &[type="email"]:invalid{
+      &~ .message-error{
+        &:before{
+          content: "L’adresse semble erronée";
+        }
+      }
+      border: 2px solid #e91c2c;
+    }
+    &[type="tel"]:invalid{
+      &~ .message-error{
+        &:before{
+          content: "Votre numero semble erroné";
+        }
+      }
+      border: 2px solid #e91c2c;
+    }
+  }
+  .input-small{
+    width: 190px;
+  }
+  .input-long{
+    width: 280px;
+  }
+  .input-file{
+    border:none;
+    .soleil(1.6em);
+    margin-right: 30px;
+    width:auto;
+  }
 }
 
 input, textarea, select, button{
@@ -593,19 +785,6 @@ input, textarea{
       box-shadow: 0 0 0 1000px #fff inset;
   }
 }
-
-input{
-
-}
-
-textarea{
-
-}
-
-select{
-
-}
-
 
 /******* MODULES *******/
 video{
@@ -742,10 +921,6 @@ video::-webkit-media-controls {
     position:absolute;
     left:50%;
     transform: translateX(-50%);
-    //right:0%;
-    //left: 50%;
-    //top: 50%;
-    //transform: translate(-50%, -50%);
     h1{
       color:white;
       padding-top:20px;
@@ -879,14 +1054,6 @@ video::-webkit-media-controls {
         transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955); /* easeInOutQuad */
         transition-delay: 0.3s;
       }
-      /*h2{
-        &:before{
-            transform: translateX(-20px);
-        }
-        &:after{
-             transform: translateX(20px);
-        }
-      }*/
       .left{
         width:50%;
         max-width: 600px;
@@ -1001,6 +1168,7 @@ video::-webkit-media-controls {
           width:164px;
           height:164px;
           &:hover{
+            cursor:  pointer;
             img{
               opacity: 0.2;
               border: 1px solid black;
@@ -1145,6 +1313,90 @@ video::-webkit-media-controls {
         margin-bottom:0;
       }
     }
+    #adresses{
+      ul{
+        margin:0;
+        padding:0;
+        .agence{
+          margin:0 10px;
+          width:48.5%;
+          height:460px;
+          background-color: red;
+          display: inline-block;
+          vertical-align: top;
+          position: relative;
+          .map{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+          }
+          .agence-info{
+            height:240px;
+            display: block;
+            position: relative;
+            background-color: fade(white, 60%);
+            padding:25px;
+          }
+          &:first-child{
+            margin-left:0;
+          }
+          &:last-child{
+            margin-right:0;
+          }
+        }
+        h4{
+          margin: 0;
+          margin-bottom:15px;
+        }
+        .agence-rue, .agence-rue-l2, .agence-ville{
+          .soleil(1.6em);
+          line-height: 1.2em;
+          color:@theme-grey-dark;
+        }
+        .agence-tel{
+          position: relative;
+          .soleil(1.6em);
+          margin-top:5px;
+          line-height: 1.8em;
+          color:@theme-blue;
+          padding-left: 30px;
+          &:before{
+            content:"";
+            background-image: url("../img/tel.png");
+            width:16px;
+            height: 14px;
+            left:0;
+            display: block;
+            position: absolute;
+            margin-top:5px;
+          }
+        }
+        .agence-email{
+          position: relative;
+          padding-left: 30px;
+          a{
+            .soleil-bold(1.6em);
+            line-height: 1.8em;
+            color:@theme-green-dark;
+            text-decoration: underline;
+          }
+          &:before{
+            content:"";
+            background-image: url("../img/mail.png");
+            width:14px;
+            height: 11px;
+            left:0;
+            display: block;
+            position: absolute;
+            margin-top:8px;
+          }
+        }
+      }
+    }
     .p-italic{
       .soleil-italic(1.8em);
       padding:0 60px;
@@ -1202,8 +1454,6 @@ video::-webkit-media-controls {
     #slides{
       display: block;
       position: relative;
-      //height: 400px;
-      //margin-bottom:20px;
     }
     .infos-onglets{
       display:block;
