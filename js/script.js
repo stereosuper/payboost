@@ -46,7 +46,6 @@ function scrollPage(){
 				$( "#header-fixed" ).removeClass("header-light");
 			}
 		}
-		
 	}
 	requestAnimFrame(scrollPage);
 }
@@ -94,14 +93,7 @@ function isHome(){
 	}
 }
 
-$(document).ready(function() {
-		$('.js-scrollTo').on('click', function() { // Au clic sur un élément
-			var page = $(this).attr('href'); // Page cible
-			var speed = 750; // Durée de l'animation (en ms)
-			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-			return false;
-		});
-	});
+//$(document).ready(function() {
 $(function(){
 	/**** VARIABLES ****/
 	var myScroll,
@@ -170,7 +162,22 @@ $(function(){
 
 		}
 	});
+
+
 	scrollPage();
+	$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+		var page = $(this).attr('href'); // Page cible
+		var speed = 600; // Durée de l'animation (en ms)
+		console.log($(page).offset().top -130);
+		$('html, body').stop().animate( { scrollTop: $(page).offset().top -130}, speed); // Go
+		if($('#team').length){
+			$("li").removeClass("active");
+	    	$( this ).parent().addClass('active');
+	    	console.log($(this));
+	    }
+		return false;
+	});
+
 
 	var h = $(window).height(), w = $(window).width();
     $(window).resize(function(){
@@ -204,12 +211,46 @@ $(function(){
 		  	$("#header-fixed .container .menu-burger-close").removeClass("no-transition");
 		  }, 250);
 	});
+
+	// Google map
+	if($("body").hasClass("has-map")){
+		var latLngSiege = {lat: 48.8862956, lng: 2.2128028};
+		var mapOptionsMapSiege = {
+			scrollwheel: false,
+			navigationControl: false,
+			mapTypeControl: false,
+			center: latLngSiege,
+			zoom: 16
+		};
+		mapSiege = new google.maps.Map(document.getElementById('map-siege'),
+	      mapOptionsMapSiege);
+		mapSiege.panBy(0, -($(".agence").height()/4));
+		var markerSiege = new google.maps.Marker({
+			position: latLngSiege,
+			map: mapSiege
+		});
+
+		var latLngCentre = {lat: 50.7217229, lng: 3.1569214};
+		var mapOptionsMapCentre = {
+			scrollwheel: false,
+			navigationControl: false,
+			mapTypeControl: false,
+			center: latLngCentre,
+			zoom: 16
+		};
+		mapCentre = new google.maps.Map(document.getElementById('map-centre'),
+	      mapOptionsMapCentre);
+		mapCentre.panBy(0, -($(".agence").height()/4));
+		var markerCentre = new google.maps.Marker({
+			position: latLngCentre,
+			map: mapCentre
+		});
+	};
     
     //scrollreveal
 	$(window).load(function(){
 	});
 
-	if(isHome() == true){
 	window.sr = ScrollReveal({ reset: true });
 	sr.reveal('.sr-anim-nb', { 
 		delay: 250,
@@ -229,7 +270,6 @@ $(function(){
 		scale: 0.7,
 		reset: true,
 	});
-	}
 
 });
 

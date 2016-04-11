@@ -460,6 +460,14 @@ a:before {
   text-align: center;
   margin: 50px 20px 75px 20px;
 }
+.form-cta {
+  text-align: left;
+}
+.form-cta .btn-border-black-green-1l {
+  margin-left: 0;
+  margin-top: 25px;
+  padding-right: 30px;
+}
 .btn-border-black-1l {
   display: inline-block;
   vertical-align: top;
@@ -864,19 +872,261 @@ a:before {
 .no-touch .link-simple:hover:before {
   transform: translateX(5px);
 }
+.link-simple-down {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: white;
+  text-decoration: underline;
+  padding: 0 0 0 20px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin: 20px;
+}
+.link-simple-down:before {
+  content: "›";
+  -webkit-transform: rotate(90deg) translateX(0px);
+          transform: rotate(90deg) translateX(0px);
+  margin: 0 10px 0 0;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  text-decoration: none;
+  font-size: 1em;
+  width: 12px;
+  height: 12px;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+.no-touch .link-simple-down:hover {
+  opacity: 0.5;
+}
+.no-touch .link-simple-down:hover:before {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+  -webkit-transform: rotate(90deg) translateX(5px);
+          transform: rotate(90deg) translateX(5px);
+}
+.link-p {
+  text-align: center;
+  margin: 20px;
+}
 .color-green {
   color: #6f9f00;
   font-weight: bold;
 }
 /******* FORMULAIRES *******/
 ::-webkit-input-placeholder {
-  color: #8b8b8b;
+  opacity: 0.8;
+  font-family: "soleil", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 ::-moz-placeholder {
-  color: #8b8b8b;
+  opacity: 0.8;
+  font-family: "soleil", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 :-ms-input-placeholder {
-  color: #8b8b8b;
+  opacity: 0.8;
+  font-family: "soleil", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+form {
+  margin: 65px 0 125px 0;
+  padding-left: 60px;
+  width: calc(100% + ~0px);
+}
+label {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #323232;
+}
+.label-decale-right {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #323232;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.label-decale {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+.form-textearea {
+  width: 100%;
+  display: block;
+}
+fieldset {
+  display: inline-block;
+  position: relative;
+}
+fieldset textarea {
+  width: 100%;
+  height: 215px;
+  display: inline-block;
+  border: 2px solid #2c344f;
+  border-radius: 3px;
+  padding: 10px 5px;
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #323232;
+}
+fieldset .check-form {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  opacity: 0;
+}
+fieldset .check-form:after {
+  content: '';
+  background-image: url("../img/check.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 50px;
+  height: 40px;
+}
+fieldset select {
+  width: 315px;
+  border: 2px solid #2c344f;
+  border-radius: 3px;
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #323232;
+  height: 40px;
+  background-color: white;
+  margin-bottom: 25px;
+  margin-right: 30px;
+}
+fieldset select option {
+  vertical-align: middle;
+  background-color: white;
+}
+fieldset input {
+  width: 235px;
+  border: 2px solid #bfc2ca;
+  border-radius: 3px;
+  padding: 10px 5px 10px 5px;
+  margin-right: 30px;
+  margin-bottom: 35px;
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #323232;
+}
+fieldset input:valid {
+  border: 2px solid #6f9f00;
+}
+fieldset input:valid ~ .check-form {
+  opacity: 1;
+}
+fieldset input[type="file"] {
+  border: none;
+  margin-right: 0;
+}
+fieldset .message-error:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 45px;
+  left: 5px;
+  font-family: "soleil", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #e91c2c;
+}
+fieldset input:focus {
+  opacity: 1;
+}
+fieldset input:focus[type="text"]:invalid {
+  border: 2px solid #e91c2c;
+}
+fieldset input:focus[type="text"]:invalid ~ .message-error.first-name-form:before {
+  content: "Votre prénom semble erroné";
+}
+fieldset input:focus[type="text"]:invalid ~ .message-error.name-form:before {
+  content: "Votre nom semble erroné";
+}
+fieldset input:focus[type="text"]:invalid ~ .message-error.entreprise-form:before {
+  content: "Votre entreprise semble erronée";
+}
+fieldset input:focus[type="email"]:invalid {
+  border: 2px solid #e91c2c;
+}
+fieldset input:focus[type="email"]:invalid ~ .message-error:before {
+  content: "L’adresse semble erronée";
+}
+fieldset input:focus[type="tel"]:invalid {
+  border: 2px solid #e91c2c;
+}
+fieldset input:focus[type="tel"]:invalid ~ .message-error:before {
+  content: "Votre numero semble erroné";
+}
+fieldset .input-small {
+  width: 190px;
+}
+fieldset .input-long {
+  width: 280px;
+}
+fieldset .input-file {
+  border: none;
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin-right: 30px;
+  width: auto;
 }
 input,
 textarea,
@@ -1154,14 +1404,6 @@ video::-webkit-media-controls {
 }
 .wrapper-align-middle .container .block-infos {
   margin: 30px 0 120px 0;
-  /*h2{
-        &:before{
-            transform: translateX(-20px);
-        }
-        &:after{
-             transform: translateX(20px);
-        }
-      }*/
 }
 .wrapper-align-middle .container .block-infos.visu-visible .gif-home {
   opacity: 1;
@@ -1334,6 +1576,9 @@ video::-webkit-media-controls {
   width: 164px;
   height: 164px;
 }
+.wrapper-align-middle .container #team > ul > li:hover {
+  cursor: pointer;
+}
 .wrapper-align-middle .container #team > ul > li:hover img {
   opacity: 0.2;
   border: 1px solid black;
@@ -1494,6 +1739,108 @@ video::-webkit-media-controls {
 }
 .wrapper-align-middle .container #jobs .cta {
   margin-bottom: 0;
+}
+.wrapper-align-middle .container #adresses ul {
+  margin: 0;
+  padding: 0;
+}
+.wrapper-align-middle .container #adresses ul .agence {
+  margin: 0 10px;
+  width: 48.5%;
+  height: 460px;
+  background-color: red;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.wrapper-align-middle .container #adresses ul .agence .map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+.wrapper-align-middle .container #adresses ul .agence .agence-info {
+  height: 240px;
+  display: block;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 25px;
+}
+.wrapper-align-middle .container #adresses ul .agence:first-child {
+  margin-left: 0;
+}
+.wrapper-align-middle .container #adresses ul .agence:last-child {
+  margin-right: 0;
+}
+.wrapper-align-middle .container #adresses ul h4 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+.wrapper-align-middle .container #adresses ul .agence-rue,
+.wrapper-align-middle .container #adresses ul .agence-rue-l2,
+.wrapper-align-middle .container #adresses ul .agence-ville {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.2em;
+  color: #323232;
+}
+.wrapper-align-middle .container #adresses ul .agence-tel {
+  position: relative;
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin-top: 5px;
+  line-height: 1.8em;
+  color: #2c344f;
+  padding-left: 30px;
+}
+.wrapper-align-middle .container #adresses ul .agence-tel:before {
+  content: "";
+  background-image: url("../img/tel.png");
+  width: 16px;
+  height: 14px;
+  left: 0;
+  display: block;
+  position: absolute;
+  margin-top: 5px;
+}
+.wrapper-align-middle .container #adresses ul .agence-email {
+  position: relative;
+  padding-left: 30px;
+}
+.wrapper-align-middle .container #adresses ul .agence-email a {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.8em;
+  color: #6f9f00;
+  text-decoration: underline;
+}
+.wrapper-align-middle .container #adresses ul .agence-email:before {
+  content: "";
+  background-image: url("../img/mail.png");
+  width: 14px;
+  height: 11px;
+  left: 0;
+  display: block;
+  position: absolute;
+  margin-top: 8px;
 }
 .wrapper-align-middle .container .p-italic {
   font-family: "soleil", sans-serif;
@@ -3010,6 +3357,12 @@ footer ul a:hover {
     margin-bottom: 0;
   }
 }
+@media (max-width: 1050px) {
+  .wrapper-align-middle .container #adresses ul .agence {
+    width: 100%;
+    margin: 30px 0 30px 0;
+  }
+}
 @media (max-width: 979px) {
   #header-fixed ul li {
     font-size: 0.8em;
@@ -3365,6 +3718,14 @@ footer ul a:hover {
   .wrapper-align-middle .block-anim .anim-paper video {
     display: none;
   }
+  .wrapper-align-middle .container #adresses ul .agence {
+    width: 48%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .wrapper-align-middle .container #adresses ul .agence h4 {
+    font-size: 2.4em;
+  }
   .wrapper-align-middle .container .infos-slides .infos-right ul li {
     margin: 0 10px 30px 10px;
   }
@@ -3489,6 +3850,9 @@ footer ul a:hover {
     line-height: 30px;
     margin: 0 2px;
   }
+  .container .wrapper-navbar .content-with-navbar #adresses h3 {
+    margin-bottom: 30px;
+  }
   .wrapper-align-middle .container .infos-onglets {
     padding: 0;
   }
@@ -3561,6 +3925,12 @@ footer ul a:hover {
   margin: 15px 0 0 0;
 }
 @media (max-width: 635px) {
+  .wrapper-align-middle .container form {
+    padding-left: 0;
+  }
+  .wrapper-align-middle .container #adresses ul .agence {
+    width: 100%;
+  }
   .wrapper-align-middle .container .wrapper-navbar .content-with-navbar .block-img-txt img {
     float: none;
     margin-left: auto;
@@ -3992,6 +4362,21 @@ footer ul a:hover {
   }
   .wrapper-align-middle .container .wrapper-navbar #team > ul > li .info-personal-team ul li {
     margin-top: 0;
+  }
+  .link-simple-down {
+    margin: 0;
+  }
+  form {
+    margin-bottom: 0;
+  }
+  form select {
+    width: 100%;
+  }
+  form input[type="file"] {
+    width: 100%;
+  }
+  #adresses h3 {
+    margin-top: 30px;
   }
   #solution .container {
     padding-top: 0;

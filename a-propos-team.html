@@ -40,23 +40,23 @@
 			<div class="container">
 				<div id="block-h1">
 					<div class="content-align-middle">
-						<h1>Notre équipe</h1>
+						<h1 id="team-title">Notre équipe</h1>
 					</div>
 				</div>
 				<div class="wrapper-navbar">
 					<nav class="navbar arrow-green">
 						<ul>
 							<li><a href="#">L'entreprise</a></li>
-							<li class="active"><a class="js-scrollTo" href="#team">L'équipe</a></li>
-							<li><a class="js-scrollTo" href="#jobs">Recrutement</a></li>
+							<li class="active"><a class="js-scrollTo" href="#team-title">L'équipe</a></li>
+							<li><a class="js-scrollTo" href="#jobs-title">Recrutement</a></li>
 							<li><a href="#">Contact</a></li>
 						</ul>
 					</nav>
 					<div class="content-with-navbar">
 						<p class="p-italic">
 							Payboost est un acteur innovant dans le développement de solutions digitales et sociales pour facturer, encaisser, recouvrer et reverser.
-						<p>
-						<div id="team" class="clearfix">
+						</p>
+						<div id="team" class="sr-anim clearfix">
 							<ul>
 								<li class="clearfix">
 									<img src="img/team-1.png" alt="">
@@ -191,15 +191,17 @@
 								</li>
 							</ul>
 						</div>
-						<h3 class="before-after-green">Travailler chez Payboost</h3>
-						<div class="block-img-txt clearfix">
-							<img class="align-left-aligned" src="img/travailler.png" alt="">
-							<p>
-								Payboost est une société <span class="txt-bold">100 % française</span> et nos solutions sont <span class="txt-bold">made in France</span>. Vivamus ut est sodales, malesuada nisl quis, sagittis nunc. Integer nec aliquet orci. Quisque sem turpis, gravida vitae pulvinar eget, cursus a mi. Mauris ac urna non dui imperdiet porttitor. Sed vitae neque at sapien aliquet dictum porta in lorem. Morbi massa sapien, facilisis eu tellus in, rutrum vulputate elit. Aliquam porta magna et mollis iaculis. Curabitur nisl sem, posuere facilisis tortor vitae.
-							</p>
+						<div class="sr-anim">
+							<h3 class="before-after-green">Travailler chez Payboost</h3>
+							<div class="block-img-txt clearfix">
+								<img class="align-left-aligned" src="img/travailler.png" alt="">
+								<p>
+									Payboost est une société <span class="txt-bold">100 % française</span> et nos solutions sont <span class="txt-bold">made in France</span>. Vivamus ut est sodales, malesuada nisl quis, sagittis nunc. Integer nec aliquet orci. Quisque sem turpis, gravida vitae pulvinar eget, cursus a mi. Mauris ac urna non dui imperdiet porttitor. Sed vitae neque at sapien aliquet dictum porta in lorem. Morbi massa sapien, facilisis eu tellus in, rutrum vulputate elit. Aliquam porta magna et mollis iaculis. Curabitur nisl sem, posuere facilisis tortor vitae.
+								</p>
+							</div>
 						</div>
 						<div id="jobs">
-						<h4>Nos offres d’emploi</h4>
+							<h4 id="jobs-title" class="sr-anim">Nos offres d’emploi</h4>
 							<ul>
 								<li>
 									<div class="title-jobs">
@@ -234,7 +236,7 @@
 							<div class="cta">
 								<a class="btn-border-black-green-1l align-center" href="#">Candidature spontanée</a>
 							</div>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
@@ -286,6 +288,8 @@
 	  	<script src='js/jquery-1.11.2.min.js'></script>
 	  	<script src='js/libs/greensock/TweenMax.min.js'></script>
 	  	<script src='js/script.js'></script>
+	  	<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+	  	<script src="js/libs/greensock/plugins/CSSRulePlugin.min.js"></script>
 
 	</body>
 
