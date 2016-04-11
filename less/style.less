@@ -184,6 +184,9 @@ img{
   h4{
     margin-top:0;
   }
+  h5{
+    font-size: 1.8em;
+  }
   p{
     margin: 0 0 15px 0;
   }
@@ -921,9 +924,29 @@ video::-webkit-media-controls {
     position:absolute;
     left:50%;
     transform: translateX(-50%);
+<<<<<<< HEAD
+=======
+    //right:0%;
+    //left: 50%;
+    //top: 50%;
+    //transform: translate(-50%, -50%);
+    .back-office &{
+      bottom: inherit;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.big{
+      max-width: 670px;
+    }
+    .categ{
+      .soleil(1.6em);
+      text-transform: uppercase;
+      margin: 0 0 8px 0;
+      padding: 100px 0 0 0;
+    }
+>>>>>>> FETCH_HEAD
     h1{
       color:white;
-      padding-top:20px;
     }
     p{
       color:white;
@@ -2058,6 +2081,57 @@ video::-webkit-media-controls {
           }
         }
       }
+    }
+  }
+}
+ul.list-bubble{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  > li{
+    display: inline-block;
+    vertical-align: top;
+    width: 33.3333%;
+    margin: 0;
+    padding: 0 5px;
+  }
+  .bubble{
+    position: relative;
+    box-sizing: border-box;
+    min-height: 114px;
+    padding: 30px 20px 0 20px;
+    .soleil-bold(1.4em);
+    text-transform: uppercase;
+    text-align: center;
+    color: #bfc2ca;
+    border-top: 1px solid #515359;
+    border-left: 1px solid #515359;
+    border-right: 1px solid #515359;
+    &:before{
+      content: "";
+      display: block;
+      width: calc(~"50% - 11px");
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: #515359;
+    }
+    &:after{
+      content: "";
+      display: block;
+      width: calc(~"50% - 11px");
+      height: 1px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: #515359;
+    }
+    .img-arrow-bottom{
+      position: absolute;
+      bottom: -11px;
+      left: 50%;
+      margin: 0 0 0 -11px;
     }
   }
 }
