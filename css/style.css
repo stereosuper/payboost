@@ -864,7 +864,8 @@ a:before {
   opacity: 0.5;
 }
 .no-touch .link-simple:hover:before {
-  transform: translateX(5px);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 .link-simple-down {
   font-family: "soleil", sans-serif;
