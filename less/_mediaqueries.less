@@ -497,17 +497,17 @@
                                 height:100%;
                                 vertical-align: middle;
                                 float:right;
-                                //position: inherit;
                                 position:absolute;
                                 left:50%;
-                                padding-top:10%;
-                                //position: relative;
+                                padding-top:8%;
                                 .team-name{
                                     opacity:1;
                                     width:100%;
                                     position: relative;
                                     transform: translateY(0px);                           
-                                    top:auto;
+                                    top:0%;
+                                    padding: 0 10px;
+                                    font-size:1.6em;
                                 }
                                 .team-statut{
                                     width:100%;
@@ -516,13 +516,18 @@
                                     margin-top: 5px;
                                     height:20%;
                                     top:auto;
+                                    font-size:1.2em;
+                                    padding:0 5px;
+                                    transform: translateY(0px);   
                                 }
                                 ul{
                                     opacity: 1;
                                     height:20%;
-                                    bottom:10%;
+                                    bottom:5%;
+                                    transform: translateY(0px);   
                                     li{
                                         margin-top:0;
+
                                     }
                                 }
                             }
@@ -718,7 +723,9 @@
                         > li{
                             min-width:auto;
                             .info-personal-team{
+                                padding-top:3%;
                                 ul{
+                                    bottom:2%;
                                     li{
                                         a{
                                             width:30px;
@@ -877,6 +884,21 @@
                             > li{
                                 width: 100%;
                                 margin-left:0;
+                                .info-personal-team{
+                                    top:20%;
+                                    .team-name{
+                                        font-size:1.8em;
+                                    }
+                                    .team-statut{
+                                        font-size:1.6em;
+                                    }
+                                    ul{
+                                        bottom:20%;
+                                        li{
+
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -1200,16 +1222,7 @@
                             display:none;
                         }
                     }
-                }
-                .p-italic{
-                  .soleil-italic(1.8em);
-                  padding:0 0;
-                  color:@theme-grey;
-                  line-height:25px;
-                  text-align:center;
-                  margin:0;
-                }
-                #team{
+                    #team{
                     > ul{
                         width:100%;
                         margin:0;
@@ -1229,14 +1242,13 @@
                             }
                             .info-personal-team{
                                 width:50%;
-                                height:100%;
                                 vertical-align: middle;
                                 float:right;
-                                //position: inherit;
                                 position:absolute;
                                 left:50%;
-                                padding-top:10%;
-                                //position: relative;
+                                top:10%;
+                                padding-top:0;
+                                font-size:0.9em;
                                 .team-name{
                                     opacity:1;
                                     width:100%;
@@ -1249,7 +1261,6 @@
                                     opacity:1;
                                     position: relative;
                                     margin-top: 5px;
-                                    height:20%;
                                     top:auto;
                                 }
                                 ul{
@@ -1264,6 +1275,16 @@
                         }
                     }
                 }
+                }
+                .p-italic{
+                  .soleil-italic(1.8em);
+                  padding:0 0;
+                  color:@theme-grey;
+                  line-height:25px;
+                  text-align:center;
+                  margin:0;
+                }
+                
             }
         }
     }

@@ -252,24 +252,26 @@ $(function(){
 	});
 
 	window.sr = ScrollReveal({ reset: true });
-	sr.reveal('.sr-anim-nb', { 
-		delay: 250,
-		duration: 400,
-		scale: 0.7,
-		reset: false,
-		reset: true,
-	});
-	sr.reveal('.sr-anim', { 
-		duration: 400,
-		scale: 0.7,
-		reset: true,
-	});
-	sr.reveal('.sr-anim-delay', { 
-		delay:500,
-		duration: 400,
-		scale: 0.7,
-		reset: true,
-	});
+	if($(window).width()>480){
+		sr.reveal('.sr-anim-nb', { 
+			delay: 250,
+			duration: 400,
+			scale: 0.7,
+			reset: false,
+			reset: true,
+		});
+		sr.reveal('.sr-anim', { 
+			duration: 400,
+			scale: 0.7,
+			reset: true,
+		});
+		sr.reveal('.sr-anim-delay', { 
+			delay:500,
+			duration: 400,
+			scale: 0.7,
+			reset: true,
+		});
+	};
 
 });
 
