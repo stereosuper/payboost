@@ -288,6 +288,7 @@ h4 {
   color: #2c344f;
   line-height: 1.2em;
   margin: 50px 300px 35px 120px;
+  min-width: 200px;
 }
 h5 {
   font-family: "soleil", sans-serif;
@@ -1192,6 +1193,24 @@ video {
 }
 video::-webkit-media-controls {
   display: none;
+}
+.info-job {
+  font-family: "soleil", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #323232;
+  padding: 0;
+}
+.info-job li {
+  list-style: none;
+  line-height: 2em;
+}
+.intitule {
+  font-weight: bold;
 }
 .wrapper-align-middle #block-h1 {
   display: table;
@@ -2794,7 +2813,8 @@ video::-webkit-media-controls {
   height: 3px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-color: #73a8d0;
 }
 .list-bubble ul:before {
@@ -2997,7 +3017,8 @@ video::-webkit-media-controls {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 222px;
   text-align: center;
   text-transform: uppercase;
