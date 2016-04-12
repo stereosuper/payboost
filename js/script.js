@@ -257,7 +257,6 @@ $(function(){
 			delay: 250,
 			duration: 400,
 			scale: 0.7,
-			reset: false,
 			reset: true,
 		});
 		sr.reveal('.sr-anim', { 
@@ -270,6 +269,12 @@ $(function(){
 			duration: 400,
 			scale: 0.7,
 			reset: true,
+		});
+		sr.reveal('.sr-anim-tl', { 
+			duration: 400,
+			scale: 0.7,
+			reset: true,
+			viewOffset  : { top: 0, right: 0, bottom: 40, left: 0 }
 		});
 	};
 
