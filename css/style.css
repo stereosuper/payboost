@@ -2750,8 +2750,7 @@ video::-webkit-media-controls {
   height: 3px;
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   background-color: #73a8d0;
 }
 .list-bubble ul:before {
@@ -2954,8 +2953,7 @@ video::-webkit-media-controls {
   position: absolute;
   top: 50%;
   left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 222px;
   text-align: center;
   text-transform: uppercase;
