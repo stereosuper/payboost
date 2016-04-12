@@ -1,5 +1,5 @@
 /******* RESPONSIVE *******/
-@media (mmin-width: 900px){
+@media (min-width: 900px){
     @media (max-height: 650px){
         .wrapper-align-middle{ 
             .block-anim{
@@ -77,6 +77,27 @@
             }
         }
     }
+    .list-bubble{
+        ul{
+            > li{
+                padding: 0 0 0 10px;
+                &:before{
+                    left: 0;
+                }
+            }
+        }
+        .bubble{
+            &.you{
+                background: none;
+            }
+            &.customer{
+                background: none;
+                strong{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
 }
 @media (max-width: 1050px){
     .wrapper-align-middle{
@@ -89,6 +110,29 @@
                     }
                 }
             }
+        }
+    }
+    .list-bubble{
+        > li{
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            padding: 0;
+            margin: 20px auto;
+        }
+        ul{
+            min-height: auto;
+        }
+        .wrapper-title{
+            display: block;
+            min-height: auto;
+        }
+        .content-title{
+            display: block;
+        }
+        .bubble{
+            min-height: auto;
+            padding: 20px 20px;
         }
     }
 }
