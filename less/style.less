@@ -854,6 +854,7 @@ video::-webkit-media-controls {
 .intitule{
   font-weight:bold;
 }
+
 .wrapper-align-middle{
    #block-h1{
     display: table;
@@ -973,6 +974,7 @@ video::-webkit-media-controls {
     height:510px;
     position:absolute;
   }
+
   .block-txt{
     margin:0 auto;
     width: 100%;
@@ -981,14 +983,16 @@ video::-webkit-media-controls {
     position:absolute;
     left:50%;
     transform: translateX(-50%);
-    //right:0%;
-    //left: 50%;
-    //top: 50%;
-    //transform: translate(-50%, -50%);
+    .no-csstransforms3d &{
+      margin-left: -292px;
+    }
     .back-office &{
       bottom: inherit;
       top: 50%;
       transform: translate(-50%, -50%);
+      .no-csstransforms3d &{
+        top: 100px;
+      }
     }
     &.big{
       max-width: 670px;

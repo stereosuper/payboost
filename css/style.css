@@ -1351,10 +1351,16 @@ video::-webkit-media-controls {
   left: 50%;
   transform: translateX(-50%);
 }
+.no-csstransforms3d .wrapper-align-middle .block-txt {
+  margin-left: -292px;
+}
 .back-office .wrapper-align-middle .block-txt {
   bottom: inherit;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.no-csstransforms3d .back-office .wrapper-align-middle .block-txt {
+  top: 100px;
 }
 .wrapper-align-middle .block-txt.big {
   max-width: 670px;
