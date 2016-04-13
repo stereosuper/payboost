@@ -47,6 +47,28 @@ function scrollPage(){
 			}
 		}
 	}
+
+	// Rendre les éléments de la sidebar "actifs" au scroll
+	$('.navbar li a.js-scrollTo').each(function () {
+		var currentLink = $(this);
+		var refElement = $(currentLink.attr("href"));
+		var firstLink = $('.navbar li a.js-scrollTo').first();
+		var refFirstElement = $(firstLink.attr("href"));
+		var lastLink = $('.navbar li a.js-scrollTo').last();
+		var refLastElement = $(lastLink.attr("href"));
+		var headerHeight = $("#header-fixed").outerHeight();
+		if (refElement.offset().top - headerHeight - 30 <= myScroll && refElement.offset().top - headerHeight - 30 + refElement.height() > myScroll) {
+			$('.navbar li a.js-scrollTo').closest('li').removeClass('active');
+			currentLink.parents('li').addClass('active');
+		}else if(myScroll<refFirstElement.offset().top){
+			$('.navbar li a.js-scrollTo').closest('li').removeClass('active');
+			$('.navbar li a.js-scrollTo').closest('li').first().addClass('active');
+		}else if(myScroll>(refLastElement.offset().top+refLastElement.height())){
+			$('.navbar li a.js-scrollTo').closest('li').removeClass('active');
+			$('.navbar li a.js-scrollTo').closest('li').last().addClass('active');
+		}
+	});
+
 	requestAnimFrame(scrollPage);
 }
 
@@ -168,13 +190,10 @@ $(function(){
 	$('.js-scrollTo').on('click', function() { // Au clic sur un élément
 		var page = $(this).attr('href'); // Page cible
 		var speed = 600; // Durée de l'animation (en ms)
-		console.log($(page).offset().top -130);
-		$('html, body').stop().animate( { scrollTop: $(page).offset().top -130}, speed); // Go
-		if($('#team').length){
-			$("li").removeClass("active");
-	    	$( this ).parent().addClass('active');
-	    	console.log($(this));
-	    }
+		$('html, body').stop().animate( { scrollTop: $(page).offset().top - ($("#header-fixed").outerHeight() + 30)}, speed); // Go
+	    var navbarParent = $(this).closest(".navbar");
+	    $("li", navbarParent).removeClass("active");
+	    $(this).closest("li").addClass('active');
 		return false;
 	});
 
