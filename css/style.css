@@ -1354,12 +1354,14 @@ video::-webkit-media-controls {
 .no-csstransforms3d .wrapper-align-middle .block-txt {
   margin-left: -292px;
 }
-.back-office .wrapper-align-middle .block-txt {
+.back-office .wrapper-align-middle .block-txt,
+.recouvrement .wrapper-align-middle .block-txt {
   bottom: inherit;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.no-csstransforms3d .back-office .wrapper-align-middle .block-txt {
+.no-csstransforms3d .back-office .wrapper-align-middle .block-txt,
+.no-csstransforms3d .recouvrement .wrapper-align-middle .block-txt {
   top: 100px;
 }
 .wrapper-align-middle .block-txt.big {
@@ -2675,7 +2677,7 @@ video::-webkit-media-controls {
 .list-bubble .bubble.customer {
   background: url("../img/picto-customer.png") no-repeat 24px 50%;
 }
-.list-bubble .bubble.customer strong {
+.back-office .list-bubble .bubble.customer strong {
   padding-left: 40px;
 }
 .list-bubble .bubble strong {
@@ -3506,7 +3508,7 @@ footer ul a:hover {
   .list-bubble .bubble.customer {
     background: none;
   }
-  .list-bubble .bubble.customer strong {
+  .back-office .list-bubble .bubble.customer strong {
     padding-left: 0;
   }
   .timeline > li {

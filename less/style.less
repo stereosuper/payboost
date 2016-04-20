@@ -986,7 +986,7 @@ video::-webkit-media-controls {
     .no-csstransforms3d &{
       margin-left: -292px;
     }
-    .back-office &{
+    .back-office &, .recouvrement &{
       bottom: inherit;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -2177,7 +2177,9 @@ video::-webkit-media-controls {
     &.customer{
       background: url("../img/picto-customer.png") no-repeat 24px 50%;
       strong{
-        padding-left: 40px;
+        .back-office &{
+          padding-left: 40px;
+        }
       }
     }
     strong{
