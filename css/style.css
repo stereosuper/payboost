@@ -3978,6 +3978,9 @@ footer ul a:hover {
   .back-office .wrapper-align-middle .block-anim .anim-paper {
     background-image: url(../img/papillons.png);
   }
+  .recouvrement .wrapper-align-middle .block-anim .anim-paper {
+    background-image: url(../img/umbrella.png);
+  }
   .wrapper-align-middle .container #adresses ul .agence {
     width: 48%;
     margin-left: 2%;
