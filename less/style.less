@@ -2342,7 +2342,7 @@ video::-webkit-media-controls {
         color: #515359;
       }
     }
-    &:last-child{
+    &:nth-child(4){
       .wrapper-tl{
         background-color: @theme-blue-light;
         &:before, &:after{
@@ -2351,6 +2351,17 @@ video::-webkit-media-controls {
       }
       h5{
         color: @theme-blue-light;
+      }
+    }
+    &:nth-child(5){
+      .wrapper-tl{
+        background-color: @theme-pink;
+        &:before, &:after{
+          background-color: @theme-pink;
+        }
+      }
+      h5{
+        color: @theme-pink;
       }
     }
   }

@@ -2856,15 +2856,25 @@ video::-webkit-media-controls {
 .timeline > li:nth-child(3) h5 {
   color: #515359;
 }
-.timeline > li:last-child .wrapper-tl {
+.timeline > li:nth-child(4) .wrapper-tl {
   background-color: #73a8d0;
 }
-.timeline > li:last-child .wrapper-tl:before,
-.timeline > li:last-child .wrapper-tl:after {
+.timeline > li:nth-child(4) .wrapper-tl:before,
+.timeline > li:nth-child(4) .wrapper-tl:after {
   background-color: #73a8d0;
 }
-.timeline > li:last-child h5 {
+.timeline > li:nth-child(4) h5 {
   color: #73a8d0;
+}
+.timeline > li:nth-child(5) .wrapper-tl {
+  background-color: #e6007d;
+}
+.timeline > li:nth-child(5) .wrapper-tl:before,
+.timeline > li:nth-child(5) .wrapper-tl:after {
+  background-color: #e6007d;
+}
+.timeline > li:nth-child(5) h5 {
+  color: #e6007d;
 }
 .timeline .arrow-tl {
   display: block;
